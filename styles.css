@@ -1,0 +1,313 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0; /* Light background */
+    color: #333; /* Dark text color */
+}
+
+/* Header */
+header {
+    background-color: #008080; /* Ocean green-like color */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header .logo {
+    font-size: 28px;
+    color: #ffcb00; /* Bright yellow for the logo */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Navigation */
+nav {
+    background-color: #008080; /* Ocean green for navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Main Menu */
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+nav ul li {
+    margin: 0 20px;
+    position: relative;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #ffcb00; /* Yellow on hover */
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+/* Dropdown Menu */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: 0;
+    background-color: #008080; /* Matching ocean green */
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block;
+    padding: 8px 20px;
+}
+
+nav ul li ul li a {
+    color: white;
+}
+
+nav ul li ul li a:hover {
+    background-color: #006666; /* Darker shade of green */
+    color: #ffcb00; /* Yellow text on hover */
+}
+
+/* Mega Menu */
+nav ul li.mega-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+nav ul li.mega-menu > a {
+    color: white;
+    padding-right: 20px;
+}
+
+nav ul li.mega-menu ul {
+    display: none;
+    position: absolute;
+    top: 40px;
+    left: -50px;
+    background-color: #008080;
+    padding: 20px;
+    border-radius: 5px;
+    width: 800px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    flex-wrap: wrap;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+nav ul li.mega-menu:hover ul {
+    display: flex;
+}
+
+nav ul li.mega-menu ul li {
+    flex: 1;
+    padding: 10px;
+}
+
+nav ul li.mega-menu ul li h3 {
+    font-size: 18px;
+    color: #ffcb00; /* Yellow for category titles */
+    margin-bottom: 10px;
+}
+
+nav ul li.mega-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+nav ul li.mega-menu ul li a:hover {
+    color: #008080; /* Ocean green color */
+    background-color: #ffcb00; /* Yellow background */
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+/* Section Styling */
+section {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ffcb00; /* Border in yellow */
+    border-radius: 5px;
+    background-color: #ffffff; /* White background */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #008080; /* Ocean green for footer */
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav ul li.mega-menu > a {
+        padding-right: 0;
+    }
+
+    nav ul li.mega-menu ul {
+        position: relative;
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav ul li.mega-menu ul li {
+        width: 100%;
+    }
+
+    nav ul li a {
+        font-size: 14px;
+    }
+}
+/* Tombol Hamburger */
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 24px;
+    width: 30px;
+}
+
+.menu-icon .bar {
+    height: 4px;
+    background-color: white;
+    width: 100%;
+    border-radius: 5px;
+}
+
+
+#menu {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#menu li {
+    margin: 0 20px;
+    position: relative;
+}
+
+#menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+
+#menu li ul {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #008080;
+    padding: 10px;
+    border-radius: 5px;
+    width: 200px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#menu li:hover ul {
+    display: block;
+}
+
+#menu li ul li a {
+    color: white;
+    font-size: 14px;
+    display: block;
+    padding: 5px 10px;
+}
+
+
+@media (max-width: 768px) {
+    
+    .menu-icon {
+        display: flex;
+    }
+
+    
+    #menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #008080;
+    }
+
+    #menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    #menu li a {
+        font-size: 18px;
+        padding: 10px;
+        display: block;
+        color: white;
+    }
+
+    #menu li a:hover {
+        background-color: #006666;
+        color: #ffcb00;
+    }
+
+
+    #menu.active {
+        display: flex;
+    }
+
+    #menu li ul {
+        display: none;
+    }
+}
+
+#menu li a:hover {
+    background-color: #ffcb00;
+    color: #008080;
+}
+
